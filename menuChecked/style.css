@@ -1,0 +1,153 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix:after{
+	content:'';
+	width:100%;
+	display:block;
+	clear:both;
+}
+a{
+	text-decoration: none;
+}
+li{
+	list-style: none;
+}
+
+/*menuCheck*/
+#menu{
+	width:1200px;
+	margin:0 auto;
+	background-color:#e2e2e2;
+}
+#menu > ul > li{
+	display: inline-block;
+	width:120px;
+	cursor: pointer;
+	position:relative;
+}
+#menu > ul > li > a{
+	display:block;
+	height:50px;
+	line-height: 50px;
+	text-align:center;
+}
+#menu > ul > li > label{
+	display: inline-block;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	cursor: pointer;
+}
+#menu > ul > li > label > input{
+	display:none;
+}
+
+
+ul#menuLevel2{
+	display: none;
+	position:absolute;
+	left:0;
+	top:100%;
+	width:100%;
+}
+ul#menuLevel2 > li > a{
+	height: 50px;
+    line-height: 50px;
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    background-color: #e2e2e2;
+    border: 1px solid #d5caca;
+}
+#menu > ul > li > label > input:checked + ul#menuLevel2{
+	display:block;
+}
+
+
+/*checkbox*/
+label.checkbox {
+}
+label.checkbox input{
+	display: none;
+}label.checkbox > span{
+	display: inline-block;
+    width: 100px;
+    height: 50px;
+    background-color: #12bd12;
+    margin: 50px;
+    border-radius: 25px;
+    border: 1px solid #099c14;
+    position:relative;
+}
+label.checkbox > span > span{
+	display: inline-block;
+    width: 46px;
+    height: 46px;
+    background-color: #f4f3f3;
+    border-radius: 50%;
+    position:absolute;
+    top:1px;
+    margin-left:1px;
+}
+label.checkbox input:checked + span{
+	background-color: #111760;
+    border: 1px solid #111760;
+}
+label.checkbox input:checked + span > span {
+	background-color: #b4b9bb;
+    right: 1px;
+}
+/* Tab */
+
+#tab{
+	width:1200px;
+	margin:50px auto;
+	border:1px solid black;
+	min-height:500px;
+	position: relative;
+	background-color: #a4a4b0;
+}
+#tab > div {
+	display: none;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 90%;
+    background-color: #93aec5;
+    text-align: center;
+    font-size:50px;
+    padding-top:50px;
+    color:red;
+}
+
+#tab input{
+	display:inline-block;
+	display: none;
+}
+#tab label{
+	display:inline-block;
+	width:20%;
+	height:50px;
+	background-color:#ebebeb;
+	float: left;
+	text-align:center;
+	line-height: 50px;
+	border:1px solid #c1c1c1;
+}
+
+#tab input:checked + label{
+	background-color: #93aec5;
+	border:none;	
+}
+
+#tab input:checked + label +div {
+	display:block;
+}
+
+
